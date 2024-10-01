@@ -1,3 +1,4 @@
+
 package com.example.ems.ems_record.entity;
 
 
@@ -61,4 +62,3 @@ public class Employee {
     }
 
 }
-

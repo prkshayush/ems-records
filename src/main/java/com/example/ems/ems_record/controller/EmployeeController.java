@@ -1,6 +1,5 @@
 package com.example.ems.ems_record.controller;
 
-
 import com.example.ems.ems_record.dto.EmployeeDto;
 import com.example.ems.ems_record.entity.Employee;
 import com.example.ems.ems_record.service.EmployeeService;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("http://localhost:3000")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/employees")
@@ -38,14 +38,14 @@ public class EmployeeController {
         return ResponseEntity.ok(employees);
     }
 
-//    Update employee REST API
+    //    Update employee REST API
     @PutMapping("{id}")
     public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId, @RequestBody EmployeeDto updatedEmployee) {
         EmployeeDto employeeDto = employeeService.updateEmployee(employeeId, updatedEmployee);
         return ResponseEntity.ok(employeeDto);
     }
 
-//    Delete Rest API
+    //    Delete Rest API
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId){
         employeeService.deleteEmployee(employeeId);
