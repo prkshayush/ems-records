@@ -64,14 +64,12 @@ cd emplims-frontend
 ### Install dependencies
 
 ``` bash
-Copy code
 npm install
 ```
 
 ### Run the application
 
 ```bash
-Copy code
 npm start
 ```
 
